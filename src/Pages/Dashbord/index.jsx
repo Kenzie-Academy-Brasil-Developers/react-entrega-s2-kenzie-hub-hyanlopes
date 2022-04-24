@@ -17,6 +17,7 @@ const Dashboard = ({ authenticated = false, setAuthenticated }) => {
     JSON.parse(localStorage.getItem("@KenzieHub:userId")) || ""
   );
   const [techs, setTechs] = useState([]);
+
   useEffect(() => {
     Api.get(`/users/${userId}`).then((res) => setTechs(res.data.techs));
   }, [TechSelected.status, addNewTech, userId]);
