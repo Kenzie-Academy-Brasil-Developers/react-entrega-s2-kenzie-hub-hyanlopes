@@ -11,7 +11,6 @@ const EditDeletTech = ({ setTechSelected, Tech, techTitle }) => {
   const [token] = useState(
     JSON.parse(localStorage.getItem("@KenzieHub:token")) || ""
   );
-  console.log(Tech);
   const FormSchema = yup.object().shape({
     title: yup.string(),
   });
