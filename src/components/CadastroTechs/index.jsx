@@ -8,14 +8,9 @@ import { toast } from "react-toastify";
 import { Container } from "./style";
 import { useState } from "react";
 const CadastroTech = ({ setAddNewTech }) => {
-  const [userId] = useState(
-    JSON.parse(localStorage.getItem("@KenzieHub:userId"))
-  );
-  console.log(userId);
   const [token] = useState(
     JSON.parse(localStorage.getItem("@KenzieHub:token")) || ""
   );
-  console.log(token);
   const FormSchema = yup.object().shape({
     title: yup.string().required("Campo Obrigatório"),
   });
